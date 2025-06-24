@@ -5,19 +5,40 @@ A modern, production-ready collaborative document editor built with React, TypeS
 ## Features
 
 ### Core Functionality
-- **Rich Text Editor**: Full-featured editor with formatting toolbar (bold, italic, underline, font sizes, colors)
+- **Rich Text Editor**: Full-featured editor with comprehensive formatting toolbar
+  - **Text Formatting**: Bold, italic, underline, strikethrough
+  - **Font Sizes**: Multiple font size options (12px, 14px, 16px, 18px, 20px, 24px, 28px, 32px)
+  - **Text Colors**: Custom color picker with predefined color palette
+  - **Background Colors**: Highlight text with background colors
+  - **Font Family**: Multiple font options (Arial, Times New Roman, Georgia, Verdana, Courier New)
 - **Real-time Collaboration**: All changes sync instantly across all connected users
-- **Multi-user Cursors**: See where other users are typing with colored indicators
+- **Multi-user Cursors**: See where other users are typing with colored indicators and usernames
 - **User Management**: Live user list with join/leave notifications
 - **Document Management**: Auto-save, status indicators, and title editing
 - **Integrated Chat**: Real-time messaging between collaborators
 
+### Advanced Features
+- **Enhanced Export Functionality**: 
+  - Export documents as Word-compatible HTML files
+  - Preserves all formatting (bold, italic, underline, colors, font sizes)
+  - Professional document structure with proper styling
+- **Real-time Cursor Tracking**: 
+  - Colored cursors for each user with unique colors
+  - Username labels on cursors for easy identification
+  - Smooth cursor movement and position updates
+- **Robust Synchronization**: 
+  - Operational transformation for conflict resolution
+  - Server-side formatting application to prevent infinite loops
+  - Efficient delta-based updates to minimize network traffic
+  - Automatic reconnection handling with state preservation
+
 ### Technical Features
-- **Operational Transformation**: Basic conflict resolution for concurrent edits
+- **Operational Transformation**: Advanced conflict resolution for concurrent edits
 - **WebSocket Connections**: Real-time bidirectional communication
 - **Responsive Design**: Optimized for desktop and tablet devices
 - **Error Handling**: Comprehensive error states and user feedback
 - **Connection Management**: Handles disconnections and reconnections gracefully
+- **Performance Optimization**: Debounced updates and efficient content comparison
 
 ## Tech Stack
 
@@ -25,6 +46,7 @@ A modern, production-ready collaborative document editor built with React, TypeS
 - **React 18** with TypeScript
 - **Tailwind CSS** for styling
 - **Quill.js** via react-quill for rich text editing
+- **quill-cursors** for real-time cursor visualization
 - **Socket.io Client** for WebSocket communication
 - **Lucide React** for icons
 - **Vite** for development and building
@@ -70,20 +92,33 @@ A modern, production-ready collaborative document editor built with React, TypeS
 ### Document Editing
 1. Open the editor in your browser
 2. Start typing - changes sync in real-time
-3. Use the formatting toolbar for rich text features
+3. Use the comprehensive formatting toolbar for rich text features:
+   - **Formatting**: Click bold, italic, underline, or strikethrough buttons
+   - **Font Size**: Select from dropdown menu (12px to 32px)
+   - **Colors**: Use color picker for text and background colors
+   - **Font Family**: Choose from multiple font options
 4. Edit the document title by clicking on it
 
 ### Collaboration
 1. Share the URL with collaborators
-2. See active users in the sidebar
-3. User cursors show where others are editing
+2. See active users in the sidebar with unique colors
+3. User cursors show where others are editing with username labels
 4. Use the integrated chat for communication
+5. All formatting changes are synchronized in real-time
+
+### Export Features
+1. Click the export button in the toolbar
+2. Download a Word-compatible HTML file
+3. Open in Microsoft Word or any HTML editor
+4. All formatting (bold, italic, colors, font sizes) is preserved
 
 ### Features Overview
 - **Auto-save**: Documents save automatically as you type
 - **Status Indicators**: See connection status and save state
-- **Export**: Download documents as text files
+- **Real-time Cursors**: Track other users' editing positions
+- **Enhanced Export**: Download formatted documents as HTML files
 - **Responsive**: Works on desktop and tablet devices
+- **Robust Sync**: Handles concurrent edits without conflicts
 
 ## Architecture
 
@@ -123,10 +158,12 @@ Currently uses in-memory storage for simplicity. For production, consider:
 
 ## Performance Considerations
 
-- **Operational Transformation**: Implements basic conflict resolution
+- **Operational Transformation**: Implements advanced conflict resolution
 - **Debounced Updates**: Reduces server load from rapid typing
 - **Connection Pooling**: Efficient WebSocket management
 - **Memory Management**: Proper cleanup of disconnected users
+- **Content Comparison**: Prevents redundant updates and infinite loops
+- **Server-side Formatting**: Ensures consistent formatting across all clients
 
 ## Security Notes
 
@@ -136,6 +173,15 @@ For production deployment, implement:
 - Input validation and sanitization
 - HTTPS/WSS for encrypted connections
 - Document access controls
+
+## Recent Updates
+
+### Enhanced Features Added:
+- **Comprehensive Formatting Toolbar**: Added font sizes, colors, background colors, and font families
+- **Real-time Cursor Visualization**: Integrated quill-cursors with username labels
+- **Word-compatible Export**: Export documents with full formatting preservation
+- **Robust Synchronization**: Improved conflict resolution and state management
+- **Performance Optimizations**: Better handling of concurrent edits and formatting
 
 ## Contributing
 
