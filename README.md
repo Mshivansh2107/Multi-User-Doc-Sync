@@ -185,3 +185,8 @@ For production deployment, implement:
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
+
+Output:
+![image](https://github.com/user-attachments/assets/0189179a-6245-4921-9efb-78a012ce6f79)
+![image](https://github.com/user-attachments/assets/45bcebbb-40b1-4267-95c4-32bada678cf5)
+
