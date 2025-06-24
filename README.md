@@ -6,15 +6,13 @@ A modern, production-ready collaborative document editor built with React, TypeS
 
 ### Core Functionality
 - **Rich Text Editor**: Full-featured editor with comprehensive formatting toolbar
-  - **Text Formatting**: Bold, italic, underline, strikethrough
-  - **Font Sizes**: Multiple font size options (12px, 14px, 16px, 18px, 20px, 24px, 28px, 32px)
-  - **Text Colors**: Custom color picker with predefined color palette
-  - **Background Colors**: Highlight text with background colors
-  - **Font Family**: Multiple font options (Arial, Times New Roman, Georgia, Verdana, Courier New)
+  - **Text Formatting**: Bold, italic, underline
+  - **Font Sizes**: Multiple font size options (8px, 10px, 12px, 14px, 16px, 18px, 24px, 32px, 48px)
+  - **Text Colors**: Color picker with predefined color palette
 - **Real-time Collaboration**: All changes sync instantly across all connected users
 - **Multi-user Cursors**: See where other users are typing with colored indicators and usernames
 - **User Management**: Live user list with join/leave notifications
-- **Document Management**: Auto-save, status indicators, and title editing
+- **Document Management**: Status indicators and title editing
 - **Integrated Chat**: Real-time messaging between collaborators
 
 ### Advanced Features
@@ -38,7 +36,7 @@ A modern, production-ready collaborative document editor built with React, TypeS
 - **Responsive Design**: Optimized for desktop and tablet devices
 - **Error Handling**: Comprehensive error states and user feedback
 - **Connection Management**: Handles disconnections and reconnections gracefully
-- **Performance Optimization**: Debounced updates and efficient content comparison
+- **Performance Optimization**: Efficient content comparison
 
 ## Tech Stack
 
@@ -93,10 +91,9 @@ A modern, production-ready collaborative document editor built with React, TypeS
 1. Open the editor in your browser
 2. Start typing - changes sync in real-time
 3. Use the comprehensive formatting toolbar for rich text features:
-   - **Formatting**: Click bold, italic, underline, or strikethrough buttons
-   - **Font Size**: Select from dropdown menu (12px to 32px)
-   - **Colors**: Use color picker for text and background colors
-   - **Font Family**: Choose from multiple font options
+   - **Formatting**: Click bold, italic, or underline buttons
+   - **Font Size**: Select from dropdown menu (8px to 48px)
+   - **Colors**: Use color picker for text colors
 4. Edit the document title by clicking on it
 
 ### Collaboration
@@ -113,7 +110,6 @@ A modern, production-ready collaborative document editor built with React, TypeS
 4. All formatting (bold, italic, colors, font sizes) is preserved
 
 ### Features Overview
-- **Auto-save**: Documents save automatically as you type
 - **Status Indicators**: See connection status and save state
 - **Real-time Cursors**: Track other users' editing positions
 - **Enhanced Export**: Download formatted documents as HTML files
@@ -159,7 +155,6 @@ Currently uses in-memory storage for simplicity. For production, consider:
 ## Performance Considerations
 
 - **Operational Transformation**: Implements advanced conflict resolution
-- **Debounced Updates**: Reduces server load from rapid typing
 - **Connection Pooling**: Efficient WebSocket management
 - **Memory Management**: Proper cleanup of disconnected users
 - **Content Comparison**: Prevents redundant updates and infinite loops
@@ -177,7 +172,7 @@ For production deployment, implement:
 ## Recent Updates
 
 ### Enhanced Features Added:
-- **Comprehensive Formatting Toolbar**: Added font sizes, colors, background colors, and font families
+- **Comprehensive Formatting Toolbar**: Added font sizes and colors
 - **Real-time Cursor Visualization**: Integrated quill-cursors with username labels
 - **Word-compatible Export**: Export documents with full formatting preservation
 - **Robust Synchronization**: Improved conflict resolution and state management
@@ -190,7 +185,3 @@ For production deployment, implement:
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-
-## License
-
-MIT License - see LICENSE file for details
